@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+	<style>
+    input[type='range'] {
+        overflow: hidden;
+        width: 100%;
+        -webkit-appearance: none;
+        background-color: #550000;
+    }
+    
+    input[type='range']::-webkit-slider-runnable-track {
+        height: 50px;
+        -webkit-appearance: none;
+        color: #13bba4;
+        margin-top: -1px;
+    }
+    
+    input[type='range']::-webkit-slider-thumb {
+        width: 50px;
+        -webkit-appearance: none;
+        height: 50px;
+        cursor: ew-resize;
+        background: #FFAAAA;
+        box-shadow: -2000px 0 0 2000px #801515;
+    }
+    
+    input[type="range"]::-moz-range-progress {
+        background-color: #801515; 
+    }
+    input[type="range"]::-moz-range-track {  
+        background-color: #550000;
+    }
+    input[type="range"]::-ms-fill-lower {
+        background-color: #801515; 
+    }
+    input[type="range"]::-ms-fill-upper {  
+        background-color: #550000;
+    }
+
+
+	body {background:#AA3939; margin:0 5px 0 5px; padding:0; }
+	#scroll {width:100%;display:block;margin:auto 0 }
+	input {width:100%;}
+	#out { color:#FFAAAA; font-size:35px;font-family: 'Roboto Mono';text-align:center; }
+	
+input[type='submit']{
+-webkit-appearance:none;
+display:inline-block;
+padding:0.46em 1.6em;
+border:0.1em solid #000000;
+margin:0 0.2em 0.2em 0;
+height:50px;
+border-radius:0.12em;
+box-sizing: border-box;
+text-decoration:none;
+font-family:'Roboto',sans-serif;
+font-weight:300;
+color:#000000;
+text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+background-color:#FFAAAA;
+text-align:center;
+transition: all 0.15s;
+}
+input[type='submit']:hover{
+-webkit-appearance:none;
+text-shadow: 0 0 2em rgba(255,255,255,1);
+color:#FFFFFF;
+border-color:#FFFFFF;
+}
+
+#off {	position:absolute;
+	bottom:0; width:99%}
+	</style>
+	<link rel="apple-touch-icon" href="https://png.icons8.com/dusk/64/000000/control-panel.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+		<title>Remote Control Panel</title>
+
+		<link rel="shortcut icon"src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUySURBVHhe7Zv9UxpHGMf5qf9skk6btzZ9iX2ZTJvUNwKtRQJqDPhGEGsDoiIvUq0SU7RjbZuKJorWaDrNaKeNGp/us/DcXLjdO0iPYuB25jPe7fPsc/t8b3cfhhGb1axmNatZrZFbU9PgG81nvDdaznblGdAg5JvPdn2Oudtazng/Ezg0Bix3G3v7W3gTjvwEqYXthiAcWSER8jZSQ+RYz1DelgCWAJYAlgAVCRCf24CAbw66miPgeLcf7Bd6Oc4r/eD5IgwBfwamZjaEY/VwfRJiDAttaszyq1iAZCYPfe4UtJ/vVQbLaHu7F/o9aUjMbQpjiaCxIpsas/zIXpYAE8kcfP1RUBnkuh6GgZFl+HZhD6K//AUTueeQfngAkdQ6eOwxaDnXzf06mgIwkcgJY5ZSzjwQs/zIbijAJEvK+d4g93G8Pwih6Q2esJrvNo/hwe4JTK4V7qeyu9B5baQw5p0+FmNNGFuN0TwIs/zIritAcj4PHVcD3N5xbRTGVvY1yScfH0J2DyC+fsjvUYylpwDZnWO47ZjkY7/6cIjHEj2D0JuHGrP8yK4rwGDPDLc5PhiCseVnmuRjLOns3glMbxzx++T6c544CsBF+P2IrYRveIy+WynhMwi9eajp/DTEEdnUGMUju1SA+OxjaGeHGdqG4480yeNyf/DkBGa3jgv3uX/AzZL9km2XJbYdSISZlT+g9c0efjDGZ+XVQTaPV8UoHtmlAgQHFni/6/o9TfLI3PYLuL/zgl+jGKGRHwv+Hw/DEtsSJMAiu/Y62cHIbFg+S59DyObxqhjFI7tUAG9zmPf3h5Y1yac3j+AH9pZjxUMvxSqA/cId7h9ne52SR9L5I7g7vsptnhv3NM8hZPMgJlkl6m6Nws1Lfg5eY3US+SJG8cguFQCXMvaPZp68lHz80SF/qwn2l8TwdSa5752O+EvJ4ypBHzw/0O68MqB5DiGbB4JVxH7Rp/gQ2CerMOQjsiFklwrQfr7wRqM/HyjJx9bYocfe/DRLGu9RhAQGO9fF/edzB0ryC+x8oHHjv/3NY7W9dVvzHEI2D6S7dYzbhu1eOFhzw/7qLQg5PLyvpz0qHKMXDyG7VABcZtiv1H223O/vnMD324VDL8ZOfNwGVO9HQktK8uxjAEwVyyKCMdDHcblP8xxCNg/k5qXC29/PuQF2C6AI2Ge/6BeO0YuHkF0qgN+VUJzMwu9Kap5DkI/IRi8DkyYB/vzVzftkourFQ8guFSCR2eIi0MP/CzhJTB5jlj6H0KvvuMwxTpBtARTh2UM3BNq8vK9qW+A0MZFYFb4Ix2U/t4nGkI/IhpD9tRAAGWeJ0kpA8Br7RL6I0SdGilNzAcyu7+VCcWoqQDXqe7lQHEMB8JsV8pGh/uZF5C/7ZqYa9b3cFUVxDAXAfUQ+MtR7TeQv24tm1/dKVhTZaroF6GQ3q75XsqIoTk0FoFPdrPpeyYqiOKacAaWU860tYnZ9r2RFURxTzoBSZHteRKX1nfxEtkpWFMWp6RZQU+489PwqWVFkqysBkHJXFNmrcgYQ5Z4FCI0R2dSY5Uf2qpwBRCVnAY0R2dSY5Uf2utsChJEf2U+NALhaylkxZvmdOgH+bywBLAEsAfQFEP2HRb30IYYCiPrrpU/drwiQyORhdGoF7o4tQiCSVRzwmnjd+zA3zDE+v6n0KwIEi4kTzqtDnHrsC0YXtQKoHRoBSwBLgKIA9O/yPl9a6FiPYK5FAfLWDybwZyNFERrqJzOYM//JjNWsZjWrWa1hm832L0hBb41AYcx9AAAAAElFTkSuQmCC" type="image/png" >
+	</head>
+	
+	<body>
+	<div id="scroll">
+	<script language="javascript" type="text/javascript">
+    function scrl() {
+            document.location = "index.html?scroll=" + document.getElementById("scrll").value;
+    }
+
+    function off() {
+        if (confirm("Уверены, что хотите выключить ПК?")) {
+            document.location = "index.html?off=Shut Down PC";
+        }
+    }
+</script>
+	<p id="out">Громкость: volume</p>
+		<input id="scrll" name="scroll" type="range" min="1" max="100" value="volume" 
+		onchange=" document.getElementById('out').innerHTML ='Громкость: ' + this.value;scrl();" >
+ 
+
+  <input id="off" type="submit" name="off" value="Shut Down PC" onclick="off();">
+	</div>
+	<form action="">
+  <input id="next" type="submit" name="next" value="Next Episode">
+</form>
+
+
+	</body>
+</html>
